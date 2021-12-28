@@ -11,7 +11,9 @@ import SwiftUI
 struct HiBoozeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HBTabView()
+            }
         }
     }
 }
