@@ -10,9 +10,9 @@ import SwiftUI
 struct TodayView: View {
     
     @StateObject var viewModel = TodayViewModel()
+    @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
-        
         VStack {
             Form {
                 Section("Alcohol Intake") {
@@ -28,7 +28,7 @@ struct TodayView: View {
                             Text("\(viewModel.numberOfDrinks) Drinks")
                         }
                     }
-                    Text("Today's Total: \(viewModel.numberOfDrinks)/\(viewModel.goalDrinks) Drinks")
+                    Text("Today's Total: \(viewModel.numberOfDrinks)/\(userSettings.drinkLimit) Drinks")
                 }
                 
                 Section("Drinks of the Day") {
@@ -37,7 +37,6 @@ struct TodayView: View {
                     }
                     .onDelete { indexSet in
                         viewModel.removeAt(offsets: indexSet)
-//                        viewModel.delete(beverage: beverage)
                     }
                 }
             }
@@ -57,7 +56,7 @@ struct TodayView: View {
         .navigationTitle("Today")
         .sheet(isPresented: $viewModel.isShowingAddView) {
             NavigationView {
-                AddBeverageView(drinksOfDay: $viewModel.drinksOfDay)
+                AddBeverageView()
                     .environmentObject(viewModel)
             }
         }

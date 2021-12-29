@@ -12,8 +12,6 @@ struct AddBeverageView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var todayViewModel: TodayViewModel
     
-    @Binding var drinksOfDay: [Beverage]
-    
     var body: some View {
         List {
             ForEach(TodayViewModel.beverageTypes, id: \.self) { beverage in

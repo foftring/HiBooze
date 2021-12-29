@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct HiBoozeApp: App {
+    
+    var userSettings = UserSettings()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 HBTabView()
+                    .environmentObject(userSettings)
             }
         }
     }

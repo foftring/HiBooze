@@ -14,6 +14,7 @@
 		018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116DE277A9F9C0090BF7F /* TodayView.swift */; };
 		01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01982E54277B40350065A9D6 /* TodayViewModel.swift */; };
 		01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
+		01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BD9C277CBE470021B950 /* UserSettings.swift */; };
 		01F8172A277AA16700EEA69F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F81729277AA16700EEA69F /* ProfileView.swift */; };
 		01F8172C277AA46300EEA69F /* MockBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* MockBeverage.swift */; };
 		01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172D277AA50700EEA69F /* AddBeverageView.swift */; };
@@ -28,6 +29,7 @@
 		018116DE277A9F9C0090BF7F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		01982E54277B40350065A9D6 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		01982E57277B41640065A9D6 /* Beverages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beverages.xcdatamodel; sourceTree = "<group>"; };
+		01E1BD9C277CBE470021B950 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		01F81729277AA16700EEA69F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		01F8172B277AA46300EEA69F /* MockBeverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBeverage.swift; sourceTree = "<group>"; };
 		01F8172D277AA50700EEA69F /* AddBeverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeverageView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				018116CE277A9EB10090BF7F /* HiBoozeApp.swift */,
+				01E1BD9C277CBE470021B950 /* UserSettings.swift */,
 				01982E51277B40050065A9D6 /* Views */,
 				01982E52277B40150065A9D6 /* Model */,
 				018116D2277A9EB30090BF7F /* Assets.xcassets */,
@@ -183,6 +186,7 @@
 				01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */,
 				01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */,
 				01F8172A277AA16700EEA69F /* ProfileView.swift in Sources */,
+				01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */,
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,
