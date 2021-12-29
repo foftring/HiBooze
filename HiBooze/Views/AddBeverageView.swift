@@ -10,16 +10,13 @@ import SwiftUI
 struct AddBeverageView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var todayViewModel: TodayViewModel
     
-    let beverageTypes: [Beverage] = [
-        Beverage(title: "Beer", calories: 90, ounces: 12),
-        Beverage(title: "Wine", calories: 100, ounces: 8),
-        Beverage(title: "Liqour", calories: 105, ounces: 2)
-    ]
+    @Binding var drinksOfDay: [Beverage]
     
     var body: some View {
         List {
-            ForEach(beverageTypes, id: \.self) { beverage in
+            ForEach(TodayViewModel.beverageTypes, id: \.self) { beverage in
                 HStack {
                     VStack(alignment: .leading) {
                         Text(beverage.title)
@@ -28,6 +25,10 @@ struct AddBeverageView: View {
                     }
                     Spacer()
                     Text("\(beverage.calories) cals")
+                }
+                .onTapGesture {
+                    todayViewModel.add(beverage: beverage)
+                    self.presentationMode.wrappedValue.dismiss()
                 }
             }
         }
@@ -45,10 +46,10 @@ struct AddBeverageView: View {
     }
 }
 
-struct AddBeverageView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            AddBeverageView()
-        }
-    }
-}
+//struct AddBeverageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            AddBeverageView(drinksOfDay: .constant([Beverage(]))
+//        }
+//    }
+//}

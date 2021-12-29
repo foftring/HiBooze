@@ -12,8 +12,10 @@
 		018116D6277A9EB30090BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D5277A9EB30090BF7F /* Preview Assets.xcassets */; };
 		018116DD277A9F840090BF7F /* HBTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116DC277A9F840090BF7F /* HBTabView.swift */; };
 		018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116DE277A9F9C0090BF7F /* TodayView.swift */; };
+		01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01982E54277B40350065A9D6 /* TodayViewModel.swift */; };
+		01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
 		01F8172A277AA16700EEA69F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F81729277AA16700EEA69F /* ProfileView.swift */; };
-		01F8172C277AA46300EEA69F /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* Beverage.swift */; };
+		01F8172C277AA46300EEA69F /* MockBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* MockBeverage.swift */; };
 		01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172D277AA50700EEA69F /* AddBeverageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +26,10 @@
 		018116D5277A9EB30090BF7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		018116DC277A9F840090BF7F /* HBTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBTabView.swift; sourceTree = "<group>"; };
 		018116DE277A9F9C0090BF7F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		01982E54277B40350065A9D6 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
+		01982E57277B41640065A9D6 /* Beverages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beverages.xcdatamodel; sourceTree = "<group>"; };
 		01F81729277AA16700EEA69F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		01F8172B277AA46300EEA69F /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		01F8172B277AA46300EEA69F /* MockBeverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBeverage.swift; sourceTree = "<group>"; };
 		01F8172D277AA50700EEA69F /* AddBeverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeverageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,11 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				018116CE277A9EB10090BF7F /* HiBoozeApp.swift */,
-				018116DC277A9F840090BF7F /* HBTabView.swift */,
-				018116DE277A9F9C0090BF7F /* TodayView.swift */,
-				01F8172D277AA50700EEA69F /* AddBeverageView.swift */,
-				01F8172B277AA46300EEA69F /* Beverage.swift */,
-				01F81729277AA16700EEA69F /* ProfileView.swift */,
+				01982E51277B40050065A9D6 /* Views */,
+				01982E52277B40150065A9D6 /* Model */,
 				018116D2277A9EB30090BF7F /* Assets.xcassets */,
 				018116D4277A9EB30090BF7F /* Preview Content */,
 			);
@@ -77,6 +78,35 @@
 				018116D5277A9EB30090BF7F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01982E51277B40050065A9D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				018116DC277A9F840090BF7F /* HBTabView.swift */,
+				01982E53277B401F0065A9D6 /* TodayView */,
+				01F8172D277AA50700EEA69F /* AddBeverageView.swift */,
+				01F81729277AA16700EEA69F /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01982E52277B40150065A9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01F8172B277AA46300EEA69F /* MockBeverage.swift */,
+				01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01982E53277B401F0065A9D6 /* TodayView */ = {
+			isa = PBXGroup;
+			children = (
+				018116DE277A9F9C0090BF7F /* TodayView.swift */,
+				01982E54277B40350065A9D6 /* TodayViewModel.swift */,
+			);
+			path = TodayView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F8172C277AA46300EEA69F /* Beverage.swift in Sources */,
+				01F8172C277AA46300EEA69F /* MockBeverage.swift in Sources */,
+				01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */,
+				01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */,
 				01F8172A277AA16700EEA69F /* ProfileView.swift in Sources */,
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
@@ -357,6 +389,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				01982E57277B41640065A9D6 /* Beverages.xcdatamodel */,
+			);
+			currentVersion = 01982E57277B41640065A9D6 /* Beverages.xcdatamodel */;
+			path = Beverages.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 018116C3277A9EB10090BF7F /* Project object */;
 }

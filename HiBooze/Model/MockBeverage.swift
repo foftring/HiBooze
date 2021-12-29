@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Beverage: Hashable {
+struct MockBeverage: Hashable {
     
     let title: String
     let calories: Int
     let ounces: Double
+    
     
 }
