@@ -44,10 +44,10 @@ struct AddBeverageView: View {
     }
 }
 
-//struct AddBeverageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationView {
-//            AddBeverageView(drinksOfDay: .constant([Beverage(]))
-//        }
-//    }
-//}
+struct AddBeverageView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            AddBeverageView()
+        }
+    }
+}

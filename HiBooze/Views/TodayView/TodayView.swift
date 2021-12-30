@@ -33,7 +33,7 @@ struct TodayView: View {
                 
                 Section("Drinks of the Day") {
                     ForEach(viewModel.drinksOfDay, id: \.self) { beverage in
-                        DrinkAndCalorieStack(title: beverage.title ?? "Blank", calories: Int(beverage.calories))
+                        DrinkAndCalorieStack(beverage: beverage)
                     }
                     .onDelete { indexSet in
                         viewModel.removeAt(offsets: indexSet)
@@ -52,6 +52,7 @@ struct TodayView: View {
         }
         .onAppear(perform: {
             viewModel.getBeverages()
+            
         })
         .navigationTitle("Today")
         .sheet(isPresented: $viewModel.isShowingAddView) {
@@ -67,20 +68,24 @@ struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             TodayView()
+                .environmentObject(UserSettings())
         }
     }
 }
 
 struct DrinkAndCalorieStack: View {
     
-    let title: String
-    let calories: Int
+    let beverage: Beverage
     
     var body: some View {
         HStack {
-            Text(title)
+            VStack(alignment: .leading) {
+                Text(beverage.title ?? "")
+                Text("\(beverage.ounces.formatted()) oz")
+                    .font(.callout)
+            }
             Spacer()
-            Text("\(calories) Cals")
+            Text("\(beverage.calories) Cals")
         }
     }
 }

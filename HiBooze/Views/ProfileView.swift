@@ -54,6 +54,7 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ProfileView()
+                .environmentObject(UserSettings())
         }
     }
 }

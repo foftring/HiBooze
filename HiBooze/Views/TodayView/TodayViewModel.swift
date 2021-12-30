@@ -23,6 +23,8 @@ class TodayViewModel: ObservableObject {
     @Published var isShowingAddView: Bool = false
     @Published var drinksOfDay: [Beverage] = []
     
+    var healthStore: HealthStore?
+    
     var numberOfDrinks: Int {
         drinksOfDay.count
     }
@@ -34,6 +36,7 @@ class TodayViewModel: ObservableObject {
     }
     
     init() {
+        healthStore = HealthStore()
         container = NSPersistentContainer(name: containerName)
         container.loadPersistentStores { _, error in
             if let error = error {
@@ -43,6 +46,8 @@ class TodayViewModel: ObservableObject {
             }
         }
     }
+    
+    // MARK: - Core Data
     
     func getBeverages() {
         let request = NSFetchRequest<Beverage>(entityName: entityName)
@@ -63,6 +68,7 @@ class TodayViewModel: ObservableObject {
         
         self.drinksOfDay.append(newBeverage)
         updateCoins()
+        updateHealthStore(action: .add, amount: Double(newBeverage.calories))
     }
     
     func save() {
@@ -74,6 +80,7 @@ class TodayViewModel: ObservableObject {
     }
     
     func removeAt(offsets: IndexSet) {
+        updateHealthStore(action: .remove)
         for index in offsets {
             let drink = drinksOfDay[index]
             container.viewContext.delete(drink)
@@ -84,11 +91,31 @@ class TodayViewModel: ObservableObject {
     func delete(beverage: Beverage) {
         container.viewContext.delete(beverage)
         updateCoins()
+        updateHealthStore(action: .remove)
     }
     
     func updateCoins() {
         save()
         getBeverages()
+    }
+    
+    // MARK: - HealthKit
+    
+    enum HealthKitSync {
+        case add, remove
+    }
+    
+    func updateHealthStore(action: HealthKitSync, amount: Double = 1) {
+        if let healthStore = healthStore {
+            switch action {
+            case .add:
+                healthStore.addAlcoholicDrink()
+                healthStore.addCalories(amount: amount)
+            case .remove:
+//                healthStore.deleteDrink()
+                return
+            }
+        }
     }
     
 }
