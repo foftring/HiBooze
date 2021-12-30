@@ -89,9 +89,9 @@ class TodayViewModel: ObservableObject {
     }
     
     func delete(beverage: Beverage) {
+        updateHealthStore(action: .remove)
         container.viewContext.delete(beverage)
         updateCoins()
-        updateHealthStore(action: .remove)
     }
     
     func updateCoins() {
@@ -112,7 +112,7 @@ class TodayViewModel: ObservableObject {
                 healthStore.addAlcoholicDrink()
                 healthStore.addCalories(amount: amount)
             case .remove:
-//                healthStore.deleteDrink()
+                healthStore.deleteDrink()
                 return
             }
         }
