@@ -96,12 +96,11 @@ class HealthStore {
         }
     }
     
-    func deleteDrink() {
+    func deleteDrink(date: Date) {
         
         let drinkToDelete = HKQuantityType(.numberOfAlcoholicBeverages)
         let beverageCount = HKQuantity(unit: HKUnit.count(), doubleValue: 1.0)
         
-        let date = Date()
         
         let beverageSample = HKQuantitySample(type: drinkToDelete, quantity: beverageCount, start: date, end: date)
         

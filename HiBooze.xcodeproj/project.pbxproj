@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF4F27837EA200285405 /* PhotoPicker.swift */; };
 		018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116CE277A9EB10090BF7F /* HiBoozeApp.swift */; };
 		018116D3277A9EB30090BF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D2277A9EB30090BF7F /* Assets.xcassets */; };
 		018116D6277A9EB30090BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D5277A9EB30090BF7F /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0114CF4F27837EA200285405 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		018116CB277A9EB10090BF7F /* HiBooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiBooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018116CE277A9EB10090BF7F /* HiBoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiBoozeApp.swift; sourceTree = "<group>"; };
 		018116D2277A9EB30090BF7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				01982E53277B401F0065A9D6 /* TodayView */,
 				01F8172D277AA50700EEA69F /* AddBeverageView.swift */,
 				01F81729277AA16700EEA69F /* ProfileView.swift */,
+				0114CF4F27837EA200285405 /* PhotoPicker.swift */,
 				01E1BD9E277CC1360021B950 /* ViewComponents */,
 			);
 			path = Views;
@@ -218,6 +221,7 @@
 				01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */,
 				01E1BDA8277DF2B50021B950 /* Date+Ext.swift in Sources */,
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
+				0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,
 				018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */,

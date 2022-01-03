@@ -68,7 +68,7 @@ class TodayViewModel: ObservableObject {
         
         self.drinksOfDay.append(newBeverage)
         updateCoins()
-        updateHealthStore(action: .add, amount: Double(newBeverage.calories))
+        updateHealthStore()
     }
     
     func save() {
@@ -80,7 +80,7 @@ class TodayViewModel: ObservableObject {
     }
     
     func removeAt(offsets: IndexSet) {
-        updateHealthStore(action: .remove)
+        updateHealthStore()
         for index in offsets {
             let drink = drinksOfDay[index]
             container.viewContext.delete(drink)
@@ -89,7 +89,7 @@ class TodayViewModel: ObservableObject {
     }
     
     func delete(beverage: Beverage) {
-        updateHealthStore(action: .remove)
+        updateHealthStore()
         container.viewContext.delete(beverage)
         updateCoins()
     }
@@ -101,21 +101,10 @@ class TodayViewModel: ObservableObject {
     
     // MARK: - HealthKit
     
-    enum HealthKitSync {
-        case add, remove
-    }
-    
-    func updateHealthStore(action: HealthKitSync, amount: Double = 1) {
+    func updateHealthStore(amount: Double = 1) {
         if let healthStore = healthStore {
-            switch action {
-            case .add:
-                healthStore.addAlcoholicDrink()
-                healthStore.addCalories(amount: amount)
-            case .remove:
-                healthStore.deleteDrink()
-                return
-            }
+            healthStore.addAlcoholicDrink()
+            healthStore.addCalories(amount: amount)
         }
     }
-    
 }
