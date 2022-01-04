@@ -10,7 +10,7 @@ Built to practice SwiftUI and gain experience working with HealthKit
 - More practice with MVVM
 
 
-#ToDo
-- Working with Siri shortcuts
-- Working with dates and calendar components 
+# ToDo
+- Implement Siri shortcuts
+- Work with dates and calendar components 
 - Bar graphs
