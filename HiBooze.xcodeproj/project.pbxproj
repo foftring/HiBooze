@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF4F27837EA200285405 /* PhotoPicker.swift */; };
+		0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF5127838C4D00285405 /* LocalFileManager.swift */; };
 		018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116CE277A9EB10090BF7F /* HiBoozeApp.swift */; };
 		018116D3277A9EB30090BF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D2277A9EB30090BF7F /* Assets.xcassets */; };
 		018116D6277A9EB30090BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D5277A9EB30090BF7F /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116DE277A9F9C0090BF7F /* TodayView.swift */; };
 		01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01982E54277B40350065A9D6 /* TodayViewModel.swift */; };
 		01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
+		01C698282784CE87005A2E15 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698272784CE87005A2E15 /* ProfileViewModel.swift */; };
 		01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BD9C277CBE470021B950 /* UserSettings.swift */; };
 		01E1BDA4277DE8C20021B950 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E1BDA3277DE8C20021B950 /* HealthKit.framework */; };
 		01E1BDA6277DEAB10021B950 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA5277DEAB10021B950 /* HealthStore.swift */; };
@@ -26,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0114CF4F27837EA200285405 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		0114CF5127838C4D00285405 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		018116CB277A9EB10090BF7F /* HiBooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiBooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018116CE277A9EB10090BF7F /* HiBoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiBoozeApp.swift; sourceTree = "<group>"; };
 		018116D2277A9EB30090BF7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		018116DE277A9F9C0090BF7F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		01982E54277B40350065A9D6 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		01982E57277B41640065A9D6 /* Beverages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beverages.xcdatamodel; sourceTree = "<group>"; };
+		01C698272784CE87005A2E15 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		01E1BD9C277CBE470021B950 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		01E1BDA1277DE8C20021B950 /* HiBooze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HiBooze.entitlements; sourceTree = "<group>"; };
 		01E1BDA3277DE8C20021B950 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -78,13 +82,11 @@
 			children = (
 				01E1BDA1277DE8C20021B950 /* HiBooze.entitlements */,
 				018116CE277A9EB10090BF7F /* HiBoozeApp.swift */,
-				01E1BD9C277CBE470021B950 /* UserSettings.swift */,
+				01C698292784D367005A2E15 /* Utilities */,
 				01982E51277B40050065A9D6 /* Views */,
 				01982E52277B40150065A9D6 /* Model */,
 				018116D2277A9EB30090BF7F /* Assets.xcassets */,
 				018116D4277A9EB30090BF7F /* Preview Content */,
-				01E1BDA5277DEAB10021B950 /* HealthStore.swift */,
-				01E1BDA7277DF2B50021B950 /* Date+Ext.swift */,
 			);
 			path = HiBooze;
 			sourceTree = "<group>";
@@ -102,8 +104,8 @@
 			children = (
 				018116DC277A9F840090BF7F /* HBTabView.swift */,
 				01982E53277B401F0065A9D6 /* TodayView */,
+				01C698262784CE52005A2E15 /* ProfileView */,
 				01F8172D277AA50700EEA69F /* AddBeverageView.swift */,
-				01F81729277AA16700EEA69F /* ProfileView.swift */,
 				0114CF4F27837EA200285405 /* PhotoPicker.swift */,
 				01E1BD9E277CC1360021B950 /* ViewComponents */,
 			);
@@ -126,6 +128,26 @@
 				01982E54277B40350065A9D6 /* TodayViewModel.swift */,
 			);
 			path = TodayView;
+			sourceTree = "<group>";
+		};
+		01C698262784CE52005A2E15 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				01F81729277AA16700EEA69F /* ProfileView.swift */,
+				01C698272784CE87005A2E15 /* ProfileViewModel.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		01C698292784D367005A2E15 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				01E1BD9C277CBE470021B950 /* UserSettings.swift */,
+				01E1BDA7277DF2B50021B950 /* Date+Ext.swift */,
+				01E1BDA5277DEAB10021B950 /* HealthStore.swift */,
+				0114CF5127838C4D00285405 /* LocalFileManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		01E1BD9E277CC1360021B950 /* ViewComponents */ = {
@@ -214,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F8172C277AA46300EEA69F /* MockBeverage.swift in Sources */,
+				0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */,
 				01E1BDA6277DEAB10021B950 /* HealthStore.swift in Sources */,
 				01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */,
 				01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */,
@@ -221,6 +244,7 @@
 				01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */,
 				01E1BDA8277DF2B50021B950 /* Date+Ext.swift in Sources */,
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
+				01C698282784CE87005A2E15 /* ProfileViewModel.swift in Sources */,
 				0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,

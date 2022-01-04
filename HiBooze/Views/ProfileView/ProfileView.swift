@@ -9,9 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @State private var goalDrinks: Int = 3
-    @State private var isShowingPhotoPicker: Bool = false
-    @State private var profileImage = UIImage(named: "default-avatar")!
+    @StateObject var viewModel = ProfileViewModel()
+    
     @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
@@ -22,12 +21,12 @@ struct ProfileView: View {
                     .foregroundColor(Color(.secondarySystemBackground))
                 
                 HStack(spacing: 50) {
-                    Image(uiImage: profileImage)
+                    Image(uiImage: viewModel.profileImage)
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 100, height: 100)
                         .onTapGesture {
-                            isShowingPhotoPicker = true
+                            viewModel.isShowingPhotoPicker = true
                         }
                     
                     
@@ -52,8 +51,8 @@ struct ProfileView: View {
             Spacer()
         }
         .navigationTitle("Profile")
-        .sheet(isPresented: $isShowingPhotoPicker, content: {
-            PhotoPicker(profileImage: $profileImage)
+        .sheet(isPresented: $viewModel.isShowingPhotoPicker, content: {
+            PhotoPicker(profileImage: $viewModel.profileImage)
         })
         .padding()
     }
