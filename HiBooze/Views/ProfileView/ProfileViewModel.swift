@@ -9,7 +9,7 @@ import SwiftUI
 
 class ProfileViewModel: ObservableObject {
     
-    @Published var goalDrinks: Int = 3
+    @Published var goalDrinks: Int = 31
     @Published var isShowingPhotoPicker: Bool = false
     @Published var profileImage : UIImage {
         didSet {

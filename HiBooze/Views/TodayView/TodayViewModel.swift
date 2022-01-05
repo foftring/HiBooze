@@ -23,6 +23,7 @@ class TodayViewModel: ObservableObject {
     @Published var isShowingAddView: Bool = false
     @Published var drinksOfDay: [Beverage] = []
     
+    
     var healthStore: HealthStore?
     
     var numberOfDrinks: Int {
