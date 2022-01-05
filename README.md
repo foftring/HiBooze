@@ -8,9 +8,9 @@ Built to practice SwiftUI and gain experience working with HealthKit
 - Saving to User defaults
 - Saving images to FileManager
 - More practice with MVVM
+- Combining UiKit (UIImagePickerController) with SwiftUI views through UIViewControllerRepresentable
 
 
 # ToDo
 - Implement Siri shortcuts
 - Work with dates and calendar components 
-- Bar graphs
