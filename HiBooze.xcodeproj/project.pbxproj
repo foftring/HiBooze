@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF4F27837EA200285405 /* PhotoPicker.swift */; };
 		0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF5127838C4D00285405 /* LocalFileManager.swift */; };
+		01490C9D2788952400655379 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490C9C2788952400655379 /* Persistance.swift */; };
 		018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116CE277A9EB10090BF7F /* HiBoozeApp.swift */; };
 		018116D3277A9EB30090BF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D2277A9EB30090BF7F /* Assets.xcassets */; };
 		018116D6277A9EB30090BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D5277A9EB30090BF7F /* Preview Assets.xcassets */; };
@@ -26,9 +27,25 @@
 		01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172D277AA50700EEA69F /* AddBeverageView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		01490C8C278886B200655379 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0114CF4F27837EA200285405 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		0114CF5127838C4D00285405 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		01490C72278886B200655379 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		01490C7D278886B200655379 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		01490C9C2788952400655379 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		018116CB277A9EB10090BF7F /* HiBooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiBooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018116CE277A9EB10090BF7F /* HiBoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiBoozeApp.swift; sourceTree = "<group>"; };
 		018116D2277A9EB30090BF7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +55,7 @@
 		01982E54277B40350065A9D6 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		01982E57277B41640065A9D6 /* Beverages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beverages.xcdatamodel; sourceTree = "<group>"; };
 		01C698272784CE87005A2E15 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		01C6982C27866739005A2E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		01E1BD9C277CBE470021B950 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		01E1BDA1277DE8C20021B950 /* HiBooze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HiBooze.entitlements; sourceTree = "<group>"; };
 		01E1BDA3277DE8C20021B950 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -80,6 +98,7 @@
 		018116CD277A9EB10090BF7F /* HiBooze */ = {
 			isa = PBXGroup;
 			children = (
+				01C6982C27866739005A2E15 /* Info.plist */,
 				01E1BDA1277DE8C20021B950 /* HiBooze.entitlements */,
 				018116CE277A9EB10090BF7F /* HiBoozeApp.swift */,
 				01C698292784D367005A2E15 /* Utilities */,
@@ -115,6 +134,7 @@
 		01982E52277B40150065A9D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01490C9C2788952400655379 /* Persistance.swift */,
 				01F8172B277AA46300EEA69F /* MockBeverage.swift */,
 				01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */,
 			);
@@ -161,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				01E1BDA3277DE8C20021B950 /* HealthKit.framework */,
+				01490C72278886B200655379 /* Intents.framework */,
+				01490C7D278886B200655379 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,6 +197,7 @@
 				018116C7277A9EB10090BF7F /* Sources */,
 				018116C8277A9EB10090BF7F /* Frameworks */,
 				018116C9277A9EB10090BF7F /* Resources */,
+				01490C8C278886B200655379 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -241,6 +264,7 @@
 				01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */,
 				01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */,
 				01F8172A277AA16700EEA69F /* ProfileView.swift in Sources */,
+				01490C9D2788952400655379 /* Persistance.swift in Sources */,
 				01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */,
 				01E1BDA8277DF2B50021B950 /* Date+Ext.swift in Sources */,
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
@@ -374,6 +398,7 @@
 		018116DA277A9EB30090BF7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HiBooze/HiBooze.entitlements;
@@ -383,8 +408,10 @@
 				DEVELOPMENT_TEAM = L997WUKPVM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HiBooze/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to suggest shortcuts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -406,6 +433,7 @@
 		018116DB277A9EB30090BF7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HiBooze/HiBooze.entitlements;
@@ -415,8 +443,10 @@
 				DEVELOPMENT_TEAM = L997WUKPVM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HiBooze/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to suggest shortcuts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

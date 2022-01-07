@@ -7,12 +7,12 @@
 
 import Foundation
 import CoreData
+import Intents
 
 class TodayViewModel: ObservableObject {
     
-    private let container: NSPersistentContainer
-    private let containerName = "Beverages"
-    private let entityName = "Beverage"
+    let persistenceController = PersistenceController.shared
+    let viewContext: NSManagedObjectContext
     
     static let beverageTypes: [MockBeverage] = [
         MockBeverage(title: "Beer", calories: 90, ounces: 12),
@@ -22,7 +22,6 @@ class TodayViewModel: ObservableObject {
     
     @Published var isShowingAddView: Bool = false
     @Published var drinksOfDay: [Beverage] = []
-    
     
     var healthStore: HealthStore?
     
@@ -38,66 +37,47 @@ class TodayViewModel: ObservableObject {
     
     init() {
         healthStore = HealthStore()
-        container = NSPersistentContainer(name: containerName)
-        container.loadPersistentStores { _, error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                self.getBeverages()
-            }
-        }
+        viewContext = persistenceController.container.viewContext
     }
     
     // MARK: - Core Data
     
     func getBeverages() {
-        let request = NSFetchRequest<Beverage>(entityName: entityName)
-        
-        do {
-            self.drinksOfDay = try container.viewContext.fetch(request)
-        } catch {
-            print("Error fetching")
-        }
+        self.drinksOfDay = persistenceController.getBeverages()
     }
     
     func add(beverage: MockBeverage) {
-        let newBeverage = Beverage(context: container.viewContext)
+        
+        let newBeverage = Beverage(context: viewContext)
         newBeverage.title = beverage.title
         newBeverage.calories = Int16(beverage.calories)
         newBeverage.ounces = beverage.ounces
         newBeverage.timeConsumed = Date()
         
         self.drinksOfDay.append(newBeverage)
-        updateCoins()
+        updateBeverages()
         updateHealthStore()
     }
     
     func save() {
-        do {
-            try container.viewContext.save()
-        } catch {
-            print("Error saving to core data")
-        }
+        persistenceController.save()
     }
     
     func removeAt(offsets: IndexSet) {
         updateHealthStore()
         for index in offsets {
             let drink = drinksOfDay[index]
-            container.viewContext.delete(drink)
+            viewContext.delete(drink)
         }
-        updateCoins()
+        updateBeverages()
     }
     
     func delete(beverage: Beverage) {
-        updateHealthStore()
-        container.viewContext.delete(beverage)
-        updateCoins()
+        persistenceController.delete(beverage: beverage)
     }
     
-    func updateCoins() {
-        save()
-        getBeverages()
+    func updateBeverages() {
+        persistenceController.updateBeverages()
     }
     
     // MARK: - HealthKit

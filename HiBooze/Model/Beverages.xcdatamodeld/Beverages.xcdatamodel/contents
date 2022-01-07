@@ -3,11 +3,10 @@
     <entity name="Beverage" representedClassName="Beverage" syncable="YES" codeGenerationType="class">
         <attribute name="calories" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="ounces" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="profileImage" optional="YES" attributeType="Binary"/>
         <attribute name="timeConsumed" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Beverage" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Beverage" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

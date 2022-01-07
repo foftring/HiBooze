@@ -36,6 +36,8 @@ class HealthStore {
             print("Error: Sharing Denied")
         case .sharingAuthorized:
             print("Authorized!")
+        @unknown default:
+            print("Unknown")
         }
         
         
