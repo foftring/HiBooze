@@ -46,9 +46,9 @@ class IntentHandler: INExtension, AddBeverageIntentHandling {
               }
         
         let intCalories = Int(truncating: calories)
-        let doubleCalories = Int(truncating: calories)
+        let intOunces = Int(truncating: ounces)
         
-        let result = addBeverage(title: title, calories: intCalories, ounces: doubleCalories)
+        let result = addBeverage(title: title, calories: intCalories, ounces: intOunces)
         
         print(result)
         
@@ -86,6 +86,9 @@ class IntentHandler: INExtension, AddBeverageIntentHandling {
             print(result)
             return result
         }
+        
+        
+        
         
     }
     

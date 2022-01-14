@@ -10,46 +10,38 @@ import CoreData
 
 struct PersistenceController {
     
-    // Storage for Core Data
-    let container: NSPersistentContainer
     private let containerName = "Beverages"
     private let entityName = "Beverage"
     
+    // Storage for Core Data
+    let container: NSPersistentContainer
+    
     // A singleton for our entire app to use
     static let shared = PersistenceController()
-
-    // A test configuration for SwiftUI previews
-    static var preview: PersistenceController = {
-        let controller = PersistenceController(inMemory: true)
-
-        // Create 10 example programming languages.
-        for _ in 0..<10 {
-            let beverage = Beverage(context: controller.container.viewContext)
-            beverage.title = "Beer!"
-            beverage.calories = 200
-            beverage.ounces = 15
-            beverage.timeConsumed = Date()
-        }
-
-        return controller
-    }()
-
-    // An initializer to load Core Data, optionally able
-    // to use an in-memory store.
+    
+    // An initializer to load Core Data, optionally able to use an in-memory store.
     init(inMemory: Bool = false) {
-        // If you didn't name your model Main you'll need
-        // to change this name below.
         container = NSPersistentContainer(name: containerName)
-
+        let storeURL = URL.storeURL(for: "group.com.hibooze.foftring", databaseName: containerName)
+        let storeDescription = NSPersistentStoreDescription(url: storeURL)
+        storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+        storeDescription.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+        
+        container.persistentStoreDescriptions = [storeDescription]
+        
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }
-
+        
         container.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Error: \(error.localizedDescription)")
             }
         }
+        
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
+        
     }
     
     // MARK: - Core Data
@@ -83,4 +75,20 @@ struct PersistenceController {
         container.viewContext.delete(beverage)
         save()
     }
+    
+    // A test configuration for SwiftUI previews
+    static var preview: PersistenceController = {
+        let controller = PersistenceController(inMemory: true)
+        
+        // Create 10 example programming languages.
+        for _ in 0..<10 {
+            let beverage = Beverage(context: controller.container.viewContext)
+            beverage.title = "Beer!"
+            beverage.calories = 200
+            beverage.ounces = 15
+            beverage.timeConsumed = Date()
+        }
+        
+        return controller
+    }()
 }
