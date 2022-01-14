@@ -14,6 +14,8 @@ class TodayViewModel: ObservableObject {
     let persistenceController = PersistenceController.shared
     let viewContext: NSManagedObjectContext
     
+    var healthStore = HealthStore.shared
+    
     static let beverageTypes: [MockBeverage] = [
         MockBeverage(title: "Beer", calories: 90, ounces: 12),
         MockBeverage(title: "Wine", calories: 100, ounces: 8),
@@ -22,8 +24,6 @@ class TodayViewModel: ObservableObject {
     
     @Published var isShowingAddView: Bool = false
     @Published var drinksOfDay: [Beverage] = []
-    
-    var healthStore: HealthStore?
     
     var numberOfDrinks: Int {
         drinksOfDay.count
@@ -36,7 +36,6 @@ class TodayViewModel: ObservableObject {
     }
     
     init() {
-        healthStore = HealthStore()
         viewContext = persistenceController.container.viewContext
     }
     
@@ -87,7 +86,7 @@ class TodayViewModel: ObservableObject {
         
         self.drinksOfDay.append(newBeverage)
         updateBeverages()
-        updateHealthStore(amount: Double(newBeverage.calories))
+        healthStore.updateHealthStore(amount: Double(newBeverage.calories))
         makeDonation(title: beverage.title, calories: Int16(beverage.calories), ounces: beverage.ounces)
     }
     
@@ -102,14 +101,5 @@ class TodayViewModel: ObservableObject {
     func updateBeverages() {
         persistenceController.save()
         getBeverages()
-    }
-    
-    // MARK: - HealthKit
-    
-    func updateHealthStore(amount: Double = 1) {
-        if let healthStore = healthStore {
-            healthStore.addAlcoholicDrink()
-            healthStore.addCalories(amount: amount)
-        }
     }
 }

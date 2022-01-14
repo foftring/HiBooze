@@ -13,6 +13,8 @@ class HealthStore {
     var healthStore: HKHealthStore?
     var query: HKStatisticsCollectionQuery?
     
+    static let shared = HealthStore()
+    
     init() {
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore()
@@ -118,6 +120,13 @@ class HealthStore {
             }
         }
         
+    }
+    
+    func updateHealthStore(amount: Double = 1) {
+        if let _ = healthStore {
+            addAlcoholicDrink()
+            addCalories(amount: amount)
+        }
     }
     
 }

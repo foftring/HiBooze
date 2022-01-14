@@ -13,8 +13,11 @@ class IntentHandler: INExtension, AddBeverageIntentHandling {
     let persistenceController = PersistenceController.shared
     let viewContext: NSManagedObjectContext
     
+    var healthStore = HealthStore.shared
+    
     override init() {
         self.viewContext = persistenceController.container.viewContext
+        
     }
     
     override func handler(for intent: INIntent) -> Any {
@@ -79,6 +82,7 @@ class IntentHandler: INExtension, AddBeverageIntentHandling {
             print("appending bevererage")
             
             persistenceController.save()
+            healthStore.updateHealthStore(amount: Double(newBeverage.calories))
             result = true
             print(result)
             return result

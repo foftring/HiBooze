@@ -60,7 +60,7 @@ struct TodayView: View {
         }
         .onAppear(perform: {
             viewModel.getBeverages()
-            viewModel.healthStore?.getAuthStatus()
+            viewModel.healthStore.getAuthStatus()
         })
         .navigationTitle("Today")
         .sheet(isPresented: $viewModel.isShowingAddView) {
