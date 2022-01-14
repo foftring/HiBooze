@@ -54,14 +54,14 @@ struct PersistenceController {
     
     // MARK: - Core Data
     
-    func getBeverages() -> [Beverage] {
+    func getBeverages() -> [Beverage]? {
         let request = NSFetchRequest<Beverage>(entityName: entityName)
         
         do {
             return try container.viewContext.fetch(request)
         } catch {
             print("Error fetching")
-            return []
+            return nil
         }
     }
     
@@ -72,6 +72,7 @@ struct PersistenceController {
         if context.hasChanges {
             do {
                 try context.save()
+                print("Saving to context")
             } catch {
                 print("Error saving to core data")
             }
@@ -80,11 +81,6 @@ struct PersistenceController {
     
     func delete(beverage: Beverage) {
         container.viewContext.delete(beverage)
-        updateBeverages()
-    }
-    
-    func updateBeverages() {
         save()
-        getBeverages()
     }
 }

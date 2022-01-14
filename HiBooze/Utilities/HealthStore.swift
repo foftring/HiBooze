@@ -30,12 +30,13 @@ class HealthStore {
         switch authStatus {
         case .notDetermined:
             requestAuthorization { success in
+                print("Case not determined")
                 print(success)
             }
         case .sharingDenied:
             print("Error: Sharing Denied")
         case .sharingAuthorized:
-            print("Authorized!")
+            break
         @unknown default:
             print("Unknown")
         }
@@ -87,7 +88,7 @@ class HealthStore {
         if let healthStore = healthStore {
             healthStore.save(sample) { success, error in
                 if success {
-                    print("Successfully save")
+                    print("Successfully save \(sample.quantityType)")
                 } else {
                     if let error = error {
                         print("_____ERROR SAVING TO HEALTH")

@@ -36,6 +36,7 @@ class LocalFileManager: ObservableObject {
                   print("Error getting path")
                   return nil
               }
+        print("Printing path")
         print(path)
         return UIImage(contentsOfFile: path)
         

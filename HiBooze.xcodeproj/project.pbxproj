@@ -10,6 +10,42 @@
 		0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF4F27837EA200285405 /* PhotoPicker.swift */; };
 		0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF5127838C4D00285405 /* LocalFileManager.swift */; };
 		01490C9D2788952400655379 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490C9C2788952400655379 /* Persistance.swift */; };
+		01490CA7278A020B00655379 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490C72278886B200655379 /* Intents.framework */; };
+		01490CAA278A020B00655379 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490CA9278A020B00655379 /* IntentHandler.swift */; };
+		01490CB1278A020B00655379 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490C7D278886B200655379 /* IntentsUI.framework */; };
+		01490CB4278A020B00655379 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490CB3278A020B00655379 /* IntentViewController.swift */; };
+		01490CB7278A020B00655379 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01490CB5278A020B00655379 /* MainInterface.storyboard */; };
+		01490CBB278A020B00655379 /* AddBeverageIntentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01490CB0278A020B00655379 /* AddBeverageIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01490CBE278A020B00655379 /* AddBeverageIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01490CA6278A020B00655379 /* AddBeverageIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01490CC6278A025400655379 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 01490CC5278A025400655379 /* Intents.intentdefinition */; };
+		01490CC7278A025400655379 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 01490CC5278A025400655379 /* Intents.intentdefinition */; };
+		01490CC8278A025400655379 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 01490CC5278A025400655379 /* Intents.intentdefinition */; };
+		01490CCA278A03EE00655379 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490CA9278A020B00655379 /* IntentHandler.swift */; };
+		01490CCB278A03EE00655379 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490CA9278A020B00655379 /* IntentHandler.swift */; };
+		01490CCC278A040A00655379 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490C9C2788952400655379 /* Persistance.swift */; };
+		01490CCD278A040B00655379 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490C9C2788952400655379 /* Persistance.swift */; };
+		01490CCE278A040D00655379 /* MockBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* MockBeverage.swift */; };
+		01490CCF278A040E00655379 /* MockBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* MockBeverage.swift */; };
+		01490CD0278A041100655379 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
+		01490CD1278A041100655379 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
+		01490CD2278A12D800655379 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116DE277A9F9C0090BF7F /* TodayView.swift */; };
+		01490CD3278A12D800655379 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01982E54277B40350065A9D6 /* TodayViewModel.swift */; };
+		01490CD4278A12D900655379 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116DE277A9F9C0090BF7F /* TodayView.swift */; };
+		01490CD5278A12D900655379 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01982E54277B40350065A9D6 /* TodayViewModel.swift */; };
+		01490CD6278A12DF00655379 /* AddBeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172D277AA50700EEA69F /* AddBeverageView.swift */; };
+		01490CD7278A12DF00655379 /* AddBeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172D277AA50700EEA69F /* AddBeverageView.swift */; };
+		01490CD8278A12E400655379 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA5277DEAB10021B950 /* HealthStore.swift */; };
+		01490CD9278A12E400655379 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA5277DEAB10021B950 /* HealthStore.swift */; };
+		01490CDA278A12E700655379 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF5127838C4D00285405 /* LocalFileManager.swift */; };
+		01490CDB278A12E800655379 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF5127838C4D00285405 /* LocalFileManager.swift */; };
+		01490CDC278A131300655379 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BD9C277CBE470021B950 /* UserSettings.swift */; };
+		01490CDD278A131400655379 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BD9C277CBE470021B950 /* UserSettings.swift */; };
+		01490CDE278A147100655379 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490C72278886B200655379 /* Intents.framework */; };
+		01490CDF278A147300655379 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490C72278886B200655379 /* Intents.framework */; };
+		01490CE0278A147600655379 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490C7D278886B200655379 /* IntentsUI.framework */; };
+		01490CE1278A147600655379 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490C7D278886B200655379 /* IntentsUI.framework */; };
+		01490CE2278A147900655379 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E1BDA3277DE8C20021B950 /* HealthKit.framework */; };
+		01490CE3278A147900655379 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E1BDA3277DE8C20021B950 /* HealthKit.framework */; };
 		018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116CE277A9EB10090BF7F /* HiBoozeApp.swift */; };
 		018116D3277A9EB30090BF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D2277A9EB30090BF7F /* Assets.xcassets */; };
 		018116D6277A9EB30090BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D5277A9EB30090BF7F /* Preview Assets.xcassets */; };
@@ -27,6 +63,23 @@
 		01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172D277AA50700EEA69F /* AddBeverageView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		01490CB9278A020B00655379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018116C3277A9EB10090BF7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01490CAF278A020B00655379;
+			remoteInfo = AddBeverageIntentUI;
+		};
+		01490CBC278A020B00655379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018116C3277A9EB10090BF7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01490CA5278A020B00655379;
+			remoteInfo = AddBeverageIntent;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		01490C8C278886B200655379 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -34,6 +87,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				01490CBB278A020B00655379 /* AddBeverageIntentUI.appex in Embed App Extensions */,
+				01490CBE278A020B00655379 /* AddBeverageIntent.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +101,15 @@
 		01490C72278886B200655379 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		01490C7D278886B200655379 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		01490C9C2788952400655379 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		01490CA6278A020B00655379 /* AddBeverageIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AddBeverageIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		01490CA9278A020B00655379 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		01490CAB278A020B00655379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01490CB0278A020B00655379 /* AddBeverageIntentUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AddBeverageIntentUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		01490CB3278A020B00655379 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		01490CB6278A020B00655379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		01490CB8278A020B00655379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01490CC5278A025400655379 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		01490CC9278A026B00655379 /* AddBeverageIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AddBeverageIntent.entitlements; sourceTree = "<group>"; };
 		018116CB277A9EB10090BF7F /* HiBooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiBooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018116CE277A9EB10090BF7F /* HiBoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiBoozeApp.swift; sourceTree = "<group>"; };
 		018116D2277A9EB30090BF7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,21 +131,65 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		01490CA3278A020B00655379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01490CE2278A147900655379 /* HealthKit.framework in Frameworks */,
+				01490CE0278A147600655379 /* IntentsUI.framework in Frameworks */,
+				01490CA7278A020B00655379 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01490CAD278A020B00655379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01490CE3278A147900655379 /* HealthKit.framework in Frameworks */,
+				01490CDF278A147300655379 /* Intents.framework in Frameworks */,
+				01490CB1278A020B00655379 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		018116C8277A9EB10090BF7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01490CDE278A147100655379 /* Intents.framework in Frameworks */,
 				01E1BDA4277DE8C20021B950 /* HealthKit.framework in Frameworks */,
+				01490CE1278A147600655379 /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01490CA8278A020B00655379 /* AddBeverageIntent */ = {
+			isa = PBXGroup;
+			children = (
+				01490CC9278A026B00655379 /* AddBeverageIntent.entitlements */,
+				01490CA9278A020B00655379 /* IntentHandler.swift */,
+				01490CAB278A020B00655379 /* Info.plist */,
+			);
+			path = AddBeverageIntent;
+			sourceTree = "<group>";
+		};
+		01490CB2278A020B00655379 /* AddBeverageIntentUI */ = {
+			isa = PBXGroup;
+			children = (
+				01490CB3278A020B00655379 /* IntentViewController.swift */,
+				01490CB5278A020B00655379 /* MainInterface.storyboard */,
+				01490CB8278A020B00655379 /* Info.plist */,
+			);
+			path = AddBeverageIntentUI;
+			sourceTree = "<group>";
+		};
 		018116C2277A9EB10090BF7F = {
 			isa = PBXGroup;
 			children = (
 				018116CD277A9EB10090BF7F /* HiBooze */,
+				01490CA8278A020B00655379 /* AddBeverageIntent */,
+				01490CB2278A020B00655379 /* AddBeverageIntentUI */,
 				018116CC277A9EB10090BF7F /* Products */,
 				01E1BDA2277DE8C20021B950 /* Frameworks */,
 			);
@@ -91,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				018116CB277A9EB10090BF7F /* HiBooze.app */,
+				01490CA6278A020B00655379 /* AddBeverageIntent.appex */,
+				01490CB0278A020B00655379 /* AddBeverageIntentUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +211,7 @@
 				01C6982C27866739005A2E15 /* Info.plist */,
 				01E1BDA1277DE8C20021B950 /* HiBooze.entitlements */,
 				018116CE277A9EB10090BF7F /* HiBoozeApp.swift */,
+				01490CC5278A025400655379 /* Intents.intentdefinition */,
 				01C698292784D367005A2E15 /* Utilities */,
 				01982E51277B40050065A9D6 /* Views */,
 				01982E52277B40150065A9D6 /* Model */,
@@ -190,6 +301,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		01490CA5278A020B00655379 /* AddBeverageIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01490CC4278A020B00655379 /* Build configuration list for PBXNativeTarget "AddBeverageIntent" */;
+			buildPhases = (
+				01490CA2278A020B00655379 /* Sources */,
+				01490CA3278A020B00655379 /* Frameworks */,
+				01490CA4278A020B00655379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddBeverageIntent;
+			productName = AddBeverageIntent;
+			productReference = 01490CA6278A020B00655379 /* AddBeverageIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		01490CAF278A020B00655379 /* AddBeverageIntentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01490CC3278A020B00655379 /* Build configuration list for PBXNativeTarget "AddBeverageIntentUI" */;
+			buildPhases = (
+				01490CAC278A020B00655379 /* Sources */,
+				01490CAD278A020B00655379 /* Frameworks */,
+				01490CAE278A020B00655379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddBeverageIntentUI;
+			productName = AddBeverageIntentUI;
+			productReference = 01490CB0278A020B00655379 /* AddBeverageIntentUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		018116CA277A9EB10090BF7F /* HiBooze */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 018116D9277A9EB30090BF7F /* Build configuration list for PBXNativeTarget "HiBooze" */;
@@ -202,6 +347,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				01490CBA278A020B00655379 /* PBXTargetDependency */,
+				01490CBD278A020B00655379 /* PBXTargetDependency */,
 			);
 			name = HiBooze;
 			productName = HiBooze;
@@ -218,6 +365,12 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					01490CA5278A020B00655379 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					01490CAF278A020B00655379 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					018116CA277A9EB10090BF7F = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -237,11 +390,28 @@
 			projectRoot = "";
 			targets = (
 				018116CA277A9EB10090BF7F /* HiBooze */,
+				01490CA5278A020B00655379 /* AddBeverageIntent */,
+				01490CAF278A020B00655379 /* AddBeverageIntentUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		01490CA4278A020B00655379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01490CAE278A020B00655379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01490CB7278A020B00655379 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		018116C9277A9EB10090BF7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +424,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		01490CA2278A020B00655379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01490CCE278A040D00655379 /* MockBeverage.swift in Sources */,
+				01490CD3278A12D800655379 /* TodayViewModel.swift in Sources */,
+				01490CC7278A025400655379 /* Intents.intentdefinition in Sources */,
+				01490CAA278A020B00655379 /* IntentHandler.swift in Sources */,
+				01490CCC278A040A00655379 /* Persistance.swift in Sources */,
+				01490CD6278A12DF00655379 /* AddBeverageView.swift in Sources */,
+				01490CD2278A12D800655379 /* TodayView.swift in Sources */,
+				01490CDA278A12E700655379 /* LocalFileManager.swift in Sources */,
+				01490CD8278A12E400655379 /* HealthStore.swift in Sources */,
+				01490CD0278A041100655379 /* Beverages.xcdatamodeld in Sources */,
+				01490CDC278A131300655379 /* UserSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01490CAC278A020B00655379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01490CC8278A025400655379 /* Intents.intentdefinition in Sources */,
+				01490CDD278A131400655379 /* UserSettings.swift in Sources */,
+				01490CDB278A12E800655379 /* LocalFileManager.swift in Sources */,
+				01490CD9278A12E400655379 /* HealthStore.swift in Sources */,
+				01490CCD278A040B00655379 /* Persistance.swift in Sources */,
+				01490CD1278A041100655379 /* Beverages.xcdatamodeld in Sources */,
+				01490CD7278A12DF00655379 /* AddBeverageView.swift in Sources */,
+				01490CD4278A12D900655379 /* TodayView.swift in Sources */,
+				01490CD5278A12D900655379 /* TodayViewModel.swift in Sources */,
+				01490CCF278A040E00655379 /* MockBeverage.swift in Sources */,
+				01490CCB278A03EE00655379 /* IntentHandler.swift in Sources */,
+				01490CB4278A020B00655379 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		018116C7277A9EB10090BF7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +471,7 @@
 				01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */,
 				01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */,
 				01F8172A277AA16700EEA69F /* ProfileView.swift in Sources */,
+				01490CC6278A025400655379 /* Intents.intentdefinition in Sources */,
 				01490C9D2788952400655379 /* Persistance.swift in Sources */,
 				01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */,
 				01E1BDA8277DF2B50021B950 /* Date+Ext.swift in Sources */,
@@ -272,13 +480,140 @@
 				0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,
+				01490CCA278A03EE00655379 /* IntentHandler.swift in Sources */,
 				018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		01490CBA278A020B00655379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01490CAF278A020B00655379 /* AddBeverageIntentUI */;
+			targetProxy = 01490CB9278A020B00655379 /* PBXContainerItemProxy */;
+		};
+		01490CBD278A020B00655379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01490CA5278A020B00655379 /* AddBeverageIntent */;
+			targetProxy = 01490CBC278A020B00655379 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01490CB5278A020B00655379 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01490CB6278A020B00655379 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		01490CBF278A020B00655379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AddBeverageIntent/AddBeverageIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L997WUKPVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AddBeverageIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AddBeverageIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foftring.HiBooze.AddBeverageIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01490CC0278A020B00655379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AddBeverageIntent/AddBeverageIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L997WUKPVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AddBeverageIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AddBeverageIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foftring.HiBooze.AddBeverageIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01490CC1278A020B00655379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L997WUKPVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AddBeverageIntentUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AddBeverageIntentUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foftring.HiBooze.AddBeverageIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01490CC2278A020B00655379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L997WUKPVM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AddBeverageIntentUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AddBeverageIntentUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foftring.HiBooze.AddBeverageIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		018116D7277A9EB30090BF7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -411,7 +746,7 @@
 				INFOPLIST_FILE = HiBooze/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
-				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to suggest shortcuts";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Use Siri to enable SiriShortcuts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -446,7 +781,7 @@
 				INFOPLIST_FILE = HiBooze/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to your health data so that it can track alcoholic drinks and calories.";
-				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to suggest shortcuts";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Use Siri to enable SiriShortcuts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +803,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01490CC3278A020B00655379 /* Build configuration list for PBXNativeTarget "AddBeverageIntentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01490CC1278A020B00655379 /* Debug */,
+				01490CC2278A020B00655379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01490CC4278A020B00655379 /* Build configuration list for PBXNativeTarget "AddBeverageIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01490CBF278A020B00655379 /* Debug */,
+				01490CC0278A020B00655379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		018116C6277A9EB10090BF7F /* Build configuration list for PBXProject "HiBooze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

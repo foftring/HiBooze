@@ -76,7 +76,6 @@ struct TodayView: View {
             }
             
             Button {
-                print("Button Tapped")
                 viewModel.isShowingAddView = true
             } label: {
                 Text("Add Drink")

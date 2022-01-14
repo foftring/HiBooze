@@ -12,6 +12,7 @@ import Intents
 struct HiBoozeApp: App {
     
     @Environment(\.scenePhase) private var scenePhase
+    
     var userSettings = UserSettings()
     let persistenceController = PersistenceController.shared
     
@@ -26,8 +27,7 @@ struct HiBoozeApp: App {
         .onChange(of: scenePhase) { phase in
             persistenceController.save()
             INPreferences.requestSiriAuthorization { authStatus in
-                // hanlde errors
-                print("Error getting Siri authorization: \(authStatus)")
+//                print(authStatus.rawValue)
             }
         }
     }
