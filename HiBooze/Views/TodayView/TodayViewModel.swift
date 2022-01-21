@@ -16,12 +16,6 @@ class TodayViewModel: ObservableObject {
     
     var healthStore = HealthStore.shared
     
-    static let beverageTypes: [MockBeverage] = [
-        MockBeverage(title: "Beer", calories: 90, ounces: 12),
-        MockBeverage(title: "Wine", calories: 100, ounces: 8),
-        MockBeverage(title: "Liqour", calories: 105, ounces: 2)
-    ]
-    
     @Published var isShowingAddView: Bool = false
     @Published var drinksOfDay: [Beverage] = []
     
@@ -76,7 +70,7 @@ class TodayViewModel: ObservableObject {
         }
     }
     
-    func add(beverage: MockBeverage) {
+    func add(beverage: BeverageType) {
         
         let newBeverage = Beverage(context: viewContext)
         newBeverage.title = beverage.title

@@ -24,8 +24,8 @@
 		01490CCB278A03EE00655379 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490CA9278A020B00655379 /* IntentHandler.swift */; };
 		01490CCC278A040A00655379 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490C9C2788952400655379 /* Persistance.swift */; };
 		01490CCD278A040B00655379 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490C9C2788952400655379 /* Persistance.swift */; };
-		01490CCE278A040D00655379 /* MockBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* MockBeverage.swift */; };
-		01490CCF278A040E00655379 /* MockBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* MockBeverage.swift */; };
+		01490CCE278A040D00655379 /* BeverageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* BeverageType.swift */; };
+		01490CCF278A040E00655379 /* BeverageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* BeverageType.swift */; };
 		01490CD0278A041100655379 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
 		01490CD1278A041100655379 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
 		01490CD2278A12D800655379 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116DE277A9F9C0090BF7F /* TodayView.swift */; };
@@ -46,6 +46,9 @@
 		01490CE1278A147600655379 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490C7D278886B200655379 /* IntentsUI.framework */; };
 		01490CE2278A147900655379 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E1BDA3277DE8C20021B950 /* HealthKit.framework */; };
 		01490CE3278A147900655379 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E1BDA3277DE8C20021B950 /* HealthKit.framework */; };
+		0166DA152794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166DA142794A34C00EACE3A /* CreateNewBeverageTypeView.swift */; };
+		0166DA162794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166DA142794A34C00EACE3A /* CreateNewBeverageTypeView.swift */; };
+		0166DA172794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166DA142794A34C00EACE3A /* CreateNewBeverageTypeView.swift */; };
 		018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116CE277A9EB10090BF7F /* HiBoozeApp.swift */; };
 		018116D3277A9EB30090BF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D2277A9EB30090BF7F /* Assets.xcassets */; };
 		018116D6277A9EB30090BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D5277A9EB30090BF7F /* Preview Assets.xcassets */; };
@@ -65,7 +68,7 @@
 		01E1BDA6277DEAB10021B950 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA5277DEAB10021B950 /* HealthStore.swift */; };
 		01E1BDA8277DF2B50021B950 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA7277DF2B50021B950 /* Date+Ext.swift */; };
 		01F8172A277AA16700EEA69F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F81729277AA16700EEA69F /* ProfileView.swift */; };
-		01F8172C277AA46300EEA69F /* MockBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* MockBeverage.swift */; };
+		01F8172C277AA46300EEA69F /* BeverageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172B277AA46300EEA69F /* BeverageType.swift */; };
 		01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8172D277AA50700EEA69F /* AddBeverageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +119,7 @@
 		01490CB8278A020B00655379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01490CC5278A025400655379 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		01490CC9278A026B00655379 /* AddBeverageIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AddBeverageIntent.entitlements; sourceTree = "<group>"; };
+		0166DA142794A34C00EACE3A /* CreateNewBeverageTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewBeverageTypeView.swift; sourceTree = "<group>"; };
 		018116CB277A9EB10090BF7F /* HiBooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiBooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018116CE277A9EB10090BF7F /* HiBoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiBoozeApp.swift; sourceTree = "<group>"; };
 		018116D2277A9EB30090BF7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,7 +138,7 @@
 		01E1BDA5277DEAB10021B950 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		01E1BDA7277DF2B50021B950 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		01F81729277AA16700EEA69F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		01F8172B277AA46300EEA69F /* MockBeverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBeverage.swift; sourceTree = "<group>"; };
+		01F8172B277AA46300EEA69F /* BeverageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageType.swift; sourceTree = "<group>"; };
 		01F8172D277AA50700EEA69F /* AddBeverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeverageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +257,7 @@
 				01982E53277B401F0065A9D6 /* TodayView */,
 				01C698262784CE52005A2E15 /* ProfileView */,
 				01F8172D277AA50700EEA69F /* AddBeverageView.swift */,
+				0166DA142794A34C00EACE3A /* CreateNewBeverageTypeView.swift */,
 				0114CF4F27837EA200285405 /* PhotoPicker.swift */,
 				01E1BD9E277CC1360021B950 /* ViewComponents */,
 			);
@@ -263,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				01490C9C2788952400655379 /* Persistance.swift */,
-				01F8172B277AA46300EEA69F /* MockBeverage.swift */,
+				01F8172B277AA46300EEA69F /* BeverageType.swift */,
 				01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */,
 			);
 			path = Model;
@@ -446,13 +451,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01490CCE278A040D00655379 /* MockBeverage.swift in Sources */,
+				01490CCE278A040D00655379 /* BeverageType.swift in Sources */,
 				018C03052791DBE5006E46DA /* URL+Ext.swift in Sources */,
 				01490CD3278A12D800655379 /* TodayViewModel.swift in Sources */,
 				01490CC7278A025400655379 /* Intents.intentdefinition in Sources */,
 				01490CAA278A020B00655379 /* IntentHandler.swift in Sources */,
 				01490CCC278A040A00655379 /* Persistance.swift in Sources */,
 				01490CD6278A12DF00655379 /* AddBeverageView.swift in Sources */,
+				0166DA162794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				01490CD2278A12D800655379 /* TodayView.swift in Sources */,
 				01490CDA278A12E700655379 /* LocalFileManager.swift in Sources */,
 				01490CD8278A12E400655379 /* HealthStore.swift in Sources */,
@@ -476,8 +482,9 @@
 				01490CD7278A12DF00655379 /* AddBeverageView.swift in Sources */,
 				01490CD4278A12D900655379 /* TodayView.swift in Sources */,
 				01490CD5278A12D900655379 /* TodayViewModel.swift in Sources */,
+				0166DA172794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				018C03062791DBE5006E46DA /* URL+Ext.swift in Sources */,
-				01490CCF278A040E00655379 /* MockBeverage.swift in Sources */,
+				01490CCF278A040E00655379 /* BeverageType.swift in Sources */,
 				01490CCB278A03EE00655379 /* IntentHandler.swift in Sources */,
 				01490CB4278A020B00655379 /* IntentViewController.swift in Sources */,
 			);
@@ -487,7 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F8172C277AA46300EEA69F /* MockBeverage.swift in Sources */,
+				01F8172C277AA46300EEA69F /* BeverageType.swift in Sources */,
 				018C03082791E0B0006E46DA /* ProgressBar.swift in Sources */,
 				0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */,
 				01E1BDA6277DEAB10021B950 /* HealthStore.swift in Sources */,
@@ -502,6 +509,7 @@
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
 				01C698282784CE87005A2E15 /* ProfileViewModel.swift in Sources */,
 				0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */,
+				0166DA152794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,
 				01490CCA278A03EE00655379 /* IntentHandler.swift in Sources */,

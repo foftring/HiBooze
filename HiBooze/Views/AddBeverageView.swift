@@ -11,23 +11,40 @@ struct AddBeverageView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var todayViewModel: TodayViewModel
+    @EnvironmentObject var userSettings: UserSettings
+    @State private var isShowingCreateNewBeverageTypeView: Bool = false
     
     var body: some View {
         List {
-            ForEach(TodayViewModel.beverageTypes, id: \.self) { beverage in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(beverage.title)
-                        Text("\(beverage.ounces.formatted())oz")
-                            .font(.caption)
+            Section {
+                ForEach(userSettings.beverageTypes, id: \.self) { beverage in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(beverage.title)
+                            Text("\(beverage.ounces.formatted())oz")
+                                .font(.caption)
+                        }
+                        Spacer()
+                        Text("\(beverage.calories) cals")
                     }
-                    Spacer()
-                    Text("\(beverage.calories) cals")
+                    .onTapGesture {
+                        todayViewModel.add(beverage: beverage)
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
                 }
-                .onTapGesture {
-                    todayViewModel.add(beverage: beverage)
-                    self.presentationMode.wrappedValue.dismiss()
-                }
+            }
+            
+            Button {
+                isShowingCreateNewBeverageTypeView = true
+            } label: {
+                Text("Add New Beverage Type")
+            }
+
+            
+        }
+        .sheet(isPresented: $isShowingCreateNewBeverageTypeView) {
+            NavigationView {
+                CreateNewBeverageTypeView()
             }
         }
         .navigationTitle("Add")

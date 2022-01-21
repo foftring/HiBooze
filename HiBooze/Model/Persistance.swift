@@ -13,6 +13,8 @@ struct PersistenceController {
     private let containerName = "Beverages"
     private let entityName = "Beverage"
     
+    static let coreDataBeverageTypes: [Beverage] = []
+    
     // Storage for Core Data
     let container: NSPersistentContainer
     
@@ -21,6 +23,7 @@ struct PersistenceController {
     
     // An initializer to load Core Data, optionally able to use an in-memory store.
     init(inMemory: Bool = false) {
+        
         container = NSPersistentContainer(name: containerName)
         let storeURL = URL.storeURL(for: "group.com.hibooze.foftring", databaseName: containerName)
         let storeDescription = NSPersistentStoreDescription(url: storeURL)
