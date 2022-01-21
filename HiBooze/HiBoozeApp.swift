@@ -27,7 +27,6 @@ struct HiBoozeApp: App {
         .onChange(of: scenePhase) { phase in
             persistenceController.save()
             INPreferences.requestSiriAuthorization { authStatus in
-//                print(authStatus.rawValue)
             }
         }
     }
