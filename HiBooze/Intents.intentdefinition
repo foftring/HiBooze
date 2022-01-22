@@ -148,7 +148,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataMaximumValue</key>
-						<integer>20</integer>
+						<integer>100</integer>
 						<key>INIntentParameterMetadataType</key>
 						<string>Field</string>
 					</dict>

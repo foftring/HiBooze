@@ -16,6 +16,10 @@ import IntentsUI
 
 class IntentViewController: UIViewController, INUIHostedViewControlling {
     
+    @IBOutlet weak var beverageAddedLabel: UILabel!
+    @IBOutlet weak var pleaseEnjoyLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,12 +29,22 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
     
     // Prepare your view controller for the interaction to handle.
     func configureView(for parameters: Set<INParameter>, of interaction: INInteraction, interactiveBehavior: INUIInteractiveBehavior, context: INUIHostedViewContext, completion: @escaping (Bool, Set<INParameter>, CGSize) -> Void) {
+        
+        guard let intent = interaction.intent as? AddBeverageIntent else {
+            completion(false, Set(), .zero)
+            return
+        }
+        
+//        if let beverageTitle = intent.title, let beverageCalories = intent.calories, let beverageOunces = intent.ounces {
+//
+//        }
+        
         // Do configuration here, including preparing views and calculating a desired size for presentation.
         completion(true, parameters, self.desiredSize)
     }
     
     var desiredSize: CGSize {
-        return self.extensionContext!.hostedViewMaximumAllowedSize
+        return CGSize.init(width: 320, height: 150)
     }
     
 }
