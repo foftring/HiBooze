@@ -32,6 +32,9 @@ struct AddBeverageView: View {
                         self.presentationMode.wrappedValue.dismiss()
                     }
                 }
+                .onDelete { indexSet in
+                    userSettings.deleteBeverageType(offsets: indexSet)
+                }
             }
             
             Button {

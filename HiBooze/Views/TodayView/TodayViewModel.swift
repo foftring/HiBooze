@@ -92,6 +92,13 @@ class TodayViewModel: ObservableObject {
         updateBeverages()
     }
     
+    func resetDrinksOfDay() {
+        for drink in drinksOfDay {
+            viewContext.delete(drink)
+        }
+        updateBeverages()
+    }
+    
     func updateBeverages() {
         persistenceController.save()
         getBeverages()

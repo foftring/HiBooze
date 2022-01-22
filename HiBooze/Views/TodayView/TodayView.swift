@@ -27,25 +27,45 @@ struct TodayView: View {
                             .frame(width: 100, height: 100)
                             .padding()
                         
-                        
-                        VStack {
-                            Text("Current")
-                            Text("\(viewModel.caloriesDrank) Cals")
-                        }
-                        VStack {
-                            Text("Drinks")
-                            Text("\(viewModel.numberOfDrinks) Drinks")
+                        VStack(spacing: 15) {
+                            Text("Current Stats")
+                                .bold()
+                            HStack {
+                                Text("\(viewModel.caloriesDrank) Cals")
+                                Text("\(viewModel.numberOfDrinks) Drinks")
+                            }
                         }
                     }
                     Text("Today's Total: \(viewModel.numberOfDrinks)/\(userSettings.drinkLimit) Drinks")
+                    Button {
+                        withAnimation {
+                            viewModel.resetDrinksOfDay()
+                        }
+                    } label: {
+                        Text("Clear All Drinks")
+                    }
                 }
                 
-                Section("Drinks of the Day") {
-                    ForEach(viewModel.drinksOfDay, id: \.self) { beverage in
-                        DrinkAndCalorieStack(beverage: beverage)
+                if !viewModel.drinksOfDay.isEmpty {
+                    Section("Drinks of the Day") {
+                        ForEach(viewModel.drinksOfDay, id: \.self) { beverage in
+                            DrinkAndCalorieStack(beverage: beverage)
+                        }
+                        .onDelete { indexSet in
+                            viewModel.removeAt(offsets: indexSet)
+                        }
                     }
-                    .onDelete { indexSet in
-                        viewModel.removeAt(offsets: indexSet)
+                } else {
+                    ZStack {
+                        EmptyState()
+                            .edgesIgnoringSafeArea(.all)
+                        VStack {
+                            Text("No Drinks Added Yet!")
+                                .font(.title)
+                                .bold()
+                            Text("Add One Below to Get Started")
+                        }
+                        //                            .foregroundColor(.pink)
                     }
                 }
             }

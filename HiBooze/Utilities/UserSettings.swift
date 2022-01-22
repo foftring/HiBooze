@@ -56,8 +56,18 @@ class UserSettings: ObservableObject {
         }
     }
     
-    func addNewBeverageType(title: String, calories: Int, ounces: Int) {
-        let newBeverage = BeverageType(title: title, calories: calories, ounces: Double(ounces))
+    func deleteBeverageType(offsets: IndexSet) {
+        
+        self.beverageTypes.remove(atOffsets: offsets)
+        saveBevTypes()
+    }
+    
+    func addNewBeverageType(title: String, calories: String, ounces: String) {
+        
+        let intCalories = Int(calories) ?? 0
+        let doubleOunces = Double(ounces) ?? 0.0
+        
+        let newBeverage = BeverageType(title: title, calories: intCalories, ounces: doubleOunces)
         
         beverageTypes.append(newBeverage)
         self.saveBevTypes()

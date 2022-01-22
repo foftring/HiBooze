@@ -63,6 +63,9 @@
 		01982E55277B40350065A9D6 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01982E54277B40350065A9D6 /* TodayViewModel.swift */; };
 		01982E58277B41640065A9D6 /* Beverages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01982E56277B41640065A9D6 /* Beverages.xcdatamodeld */; };
 		01C698282784CE87005A2E15 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C698272784CE87005A2E15 /* ProfileViewModel.swift */; };
+		01C7AE84279C854B0031D8A5 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7AE83279C854B0031D8A5 /* EmptyState.swift */; };
+		01C7AE85279C854B0031D8A5 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7AE83279C854B0031D8A5 /* EmptyState.swift */; };
+		01C7AE86279C854B0031D8A5 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7AE83279C854B0031D8A5 /* EmptyState.swift */; };
 		01E1BD9D277CBE470021B950 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BD9C277CBE470021B950 /* UserSettings.swift */; };
 		01E1BDA4277DE8C20021B950 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E1BDA3277DE8C20021B950 /* HealthKit.framework */; };
 		01E1BDA6277DEAB10021B950 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA5277DEAB10021B950 /* HealthStore.swift */; };
@@ -132,6 +135,7 @@
 		01982E57277B41640065A9D6 /* Beverages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beverages.xcdatamodel; sourceTree = "<group>"; };
 		01C698272784CE87005A2E15 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		01C6982C27866739005A2E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		01C7AE83279C854B0031D8A5 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		01E1BD9C277CBE470021B950 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		01E1BDA1277DE8C20021B950 /* HiBooze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HiBooze.entitlements; sourceTree = "<group>"; };
 		01E1BDA3277DE8C20021B950 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -307,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				018C03072791E0B0006E46DA /* ProgressBar.swift */,
+				01C7AE83279C854B0031D8A5 /* EmptyState.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				01490CDA278A12E700655379 /* LocalFileManager.swift in Sources */,
 				01490CD8278A12E400655379 /* HealthStore.swift in Sources */,
 				018C03092791E0B0006E46DA /* ProgressBar.swift in Sources */,
+				01C7AE85279C854B0031D8A5 /* EmptyState.swift in Sources */,
 				01490CD0278A041100655379 /* Beverages.xcdatamodeld in Sources */,
 				01490CDC278A131300655379 /* UserSettings.swift in Sources */,
 			);
@@ -483,6 +489,7 @@
 				01490CD4278A12D900655379 /* TodayView.swift in Sources */,
 				01490CD5278A12D900655379 /* TodayViewModel.swift in Sources */,
 				0166DA172794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
+				01C7AE86279C854B0031D8A5 /* EmptyState.swift in Sources */,
 				018C03062791DBE5006E46DA /* URL+Ext.swift in Sources */,
 				01490CCF278A040E00655379 /* BeverageType.swift in Sources */,
 				01490CCB278A03EE00655379 /* IntentHandler.swift in Sources */,
@@ -509,6 +516,7 @@
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
 				01C698282784CE87005A2E15 /* ProfileViewModel.swift in Sources */,
 				0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */,
+				01C7AE84279C854B0031D8A5 /* EmptyState.swift in Sources */,
 				0166DA152794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,

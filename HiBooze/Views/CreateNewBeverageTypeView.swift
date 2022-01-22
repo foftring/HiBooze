@@ -10,28 +10,28 @@ import SwiftUI
 struct CreateNewBeverageTypeView: View {
     
     @State private var beverageTitle: String = ""
-    @State private var beverageCalories: Int = 0
-    @State private var beverageOunces: Int = 0
+    @State private var beverageCalories: String = ""
+    @State private var beverageOunces: String = ""
     
     @EnvironmentObject var userSettings: UserSettings
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         Form {
             TextField("Title", text: $beverageTitle)
             HStack {
-                Text("Calories:")
-                TextField("", value: $beverageCalories, format: .number)
+                TextField("Calories", text: $beverageCalories)
                     .keyboardType(.decimalPad)
             }
             HStack {
-                Text("Ounces:")
-                TextField("", value: $beverageOunces, format: .number)
+                TextField("Ounces", text: $beverageOunces)
                     .keyboardType(.decimalPad)
             }
             
             Button {
                 print("Save")
                 userSettings.addNewBeverageType(title: beverageTitle, calories: beverageCalories, ounces: beverageOunces)
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Save")
             }
