@@ -9,6 +9,8 @@ import Foundation
 
 class UserSettings: ObservableObject {
     
+    static let shared = UserSettings()
+    
     enum USKeys: String {
         case drinkLimit = "drinkLimit"
         case beverageTypes = "beverageTypes"

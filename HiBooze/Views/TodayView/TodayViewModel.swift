@@ -12,11 +12,14 @@ import Intents
 class TodayViewModel: ObservableObject {
     
     let persistenceController = PersistenceController.shared
+    let userSettings = UserSettings.shared
+    
     let viewContext: NSManagedObjectContext
     
     var healthStore = HealthStore.shared
     
     @Published var isShowingAddView: Bool = false
+    @Published var isShowingAlert: Bool = false
     @Published var drinksOfDay: [Beverage] = []
     
     var numberOfDrinks: Int {
@@ -29,8 +32,16 @@ class TodayViewModel: ObservableObject {
         }
     }
     
+    let alert = AlertContext.drinkLimitReached
+    
     init() {
         viewContext = persistenceController.container.viewContext
+    }
+    
+    func drinkLimitHasBeenReached() {
+        if drinksOfDay.count >= userSettings.drinkLimit {
+            isShowingAlert = true
+        }
     }
     
     // MARK: - Siri Shortcuts

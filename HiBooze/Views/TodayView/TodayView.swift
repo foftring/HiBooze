@@ -83,11 +83,16 @@ struct TodayView: View {
             viewModel.healthStore.getAuthStatus()
         })
         .navigationTitle("Today")
-        .sheet(isPresented: $viewModel.isShowingAddView) {
+        .sheet(isPresented: $viewModel.isShowingAddView, onDismiss: {
+            viewModel.drinkLimitHasBeenReached()
+        }) {
             NavigationView {
                 AddBeverageView()
                     .environmentObject(viewModel)
             }
+        }
+        .alert(isPresented: $viewModel.isShowingAlert) {
+            Alert(title: viewModel.alert.title, message: viewModel.alert.message, dismissButton: viewModel.alert.dismiss)
         }
     }
 }
