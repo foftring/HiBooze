@@ -18,6 +18,11 @@ struct HBTabView: View {
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }
+            
+            DateView()
+                .tabItem {
+                    Label("History", systemImage: "clock.fill")
+                }
         }
     }
 }

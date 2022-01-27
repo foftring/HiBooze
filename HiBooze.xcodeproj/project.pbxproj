@@ -52,6 +52,15 @@
 		017DAC5B279E22F900BA9904 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC5A279E22F900BA9904 /* Alert.swift */; };
 		017DAC5C279E22F900BA9904 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC5A279E22F900BA9904 /* Alert.swift */; };
 		017DAC5D279E22F900BA9904 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC5A279E22F900BA9904 /* Alert.swift */; };
+		017DAC5F279E312A00BA9904 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC5E279E312A00BA9904 /* DateView.swift */; };
+		017DAC60279E312A00BA9904 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC5E279E312A00BA9904 /* DateView.swift */; };
+		017DAC61279E312A00BA9904 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC5E279E312A00BA9904 /* DateView.swift */; };
+		017DAC6C279E37C600BA9904 /* Beverage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC6A279E37C600BA9904 /* Beverage+CoreDataClass.swift */; };
+		017DAC6D279E37C600BA9904 /* Beverage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC6A279E37C600BA9904 /* Beverage+CoreDataClass.swift */; };
+		017DAC6E279E37C600BA9904 /* Beverage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC6A279E37C600BA9904 /* Beverage+CoreDataClass.swift */; };
+		017DAC6F279E37C600BA9904 /* Beverage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC6B279E37C600BA9904 /* Beverage+CoreDataProperties.swift */; };
+		017DAC70279E37C600BA9904 /* Beverage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC6B279E37C600BA9904 /* Beverage+CoreDataProperties.swift */; };
+		017DAC71279E37C600BA9904 /* Beverage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DAC6B279E37C600BA9904 /* Beverage+CoreDataProperties.swift */; };
 		018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018116CE277A9EB10090BF7F /* HiBoozeApp.swift */; };
 		018116D3277A9EB30090BF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D2277A9EB30090BF7F /* Assets.xcassets */; };
 		018116D6277A9EB30090BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018116D5277A9EB30090BF7F /* Preview Assets.xcassets */; };
@@ -127,6 +136,9 @@
 		01490CC9278A026B00655379 /* AddBeverageIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AddBeverageIntent.entitlements; sourceTree = "<group>"; };
 		0166DA142794A34C00EACE3A /* CreateNewBeverageTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewBeverageTypeView.swift; sourceTree = "<group>"; };
 		017DAC5A279E22F900BA9904 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		017DAC5E279E312A00BA9904 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		017DAC6A279E37C600BA9904 /* Beverage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beverage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		017DAC6B279E37C600BA9904 /* Beverage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beverage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		018116CB277A9EB10090BF7F /* HiBooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiBooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018116CE277A9EB10090BF7F /* HiBoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiBoozeApp.swift; sourceTree = "<group>"; };
 		018116D2277A9EB30090BF7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +219,8 @@
 		018116C2277A9EB10090BF7F = {
 			isa = PBXGroup;
 			children = (
+				017DAC6A279E37C600BA9904 /* Beverage+CoreDataClass.swift */,
+				017DAC6B279E37C600BA9904 /* Beverage+CoreDataProperties.swift */,
 				018116CD277A9EB10090BF7F /* HiBooze */,
 				01490CA8278A020B00655379 /* AddBeverageIntent */,
 				01490CB2278A020B00655379 /* AddBeverageIntentUI */,
@@ -268,6 +282,7 @@
 				0166DA142794A34C00EACE3A /* CreateNewBeverageTypeView.swift */,
 				0114CF4F27837EA200285405 /* PhotoPicker.swift */,
 				01E1BD9E277CC1360021B950 /* ViewComponents */,
+				017DAC5E279E312A00BA9904 /* DateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,6 +482,7 @@
 				01490CC7278A025400655379 /* Intents.intentdefinition in Sources */,
 				01490CAA278A020B00655379 /* IntentHandler.swift in Sources */,
 				01490CCC278A040A00655379 /* Persistance.swift in Sources */,
+				017DAC70279E37C600BA9904 /* Beverage+CoreDataProperties.swift in Sources */,
 				01490CD6278A12DF00655379 /* AddBeverageView.swift in Sources */,
 				0166DA162794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				01490CD2278A12D800655379 /* TodayView.swift in Sources */,
@@ -475,8 +491,10 @@
 				018C03092791E0B0006E46DA /* ProgressBar.swift in Sources */,
 				01C7AE85279C854B0031D8A5 /* EmptyState.swift in Sources */,
 				01490CD0278A041100655379 /* Beverages.xcdatamodeld in Sources */,
+				017DAC6D279E37C600BA9904 /* Beverage+CoreDataClass.swift in Sources */,
 				017DAC5C279E22F900BA9904 /* Alert.swift in Sources */,
 				01490CDC278A131300655379 /* UserSettings.swift in Sources */,
+				017DAC60279E312A00BA9904 /* DateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,14 +508,17 @@
 				017DAC5D279E22F900BA9904 /* Alert.swift in Sources */,
 				01490CD9278A12E400655379 /* HealthStore.swift in Sources */,
 				01490CCD278A040B00655379 /* Persistance.swift in Sources */,
+				017DAC61279E312A00BA9904 /* DateView.swift in Sources */,
 				01490CD1278A041100655379 /* Beverages.xcdatamodeld in Sources */,
 				018C030A2791E0B0006E46DA /* ProgressBar.swift in Sources */,
 				01490CD7278A12DF00655379 /* AddBeverageView.swift in Sources */,
 				01490CD4278A12D900655379 /* TodayView.swift in Sources */,
+				017DAC6E279E37C600BA9904 /* Beverage+CoreDataClass.swift in Sources */,
 				01490CD5278A12D900655379 /* TodayViewModel.swift in Sources */,
 				0166DA172794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				01C7AE86279C854B0031D8A5 /* EmptyState.swift in Sources */,
 				018C03062791DBE5006E46DA /* URL+Ext.swift in Sources */,
+				017DAC71279E37C600BA9904 /* Beverage+CoreDataProperties.swift in Sources */,
 				01490CCF278A040E00655379 /* BeverageType.swift in Sources */,
 				01490CCB278A03EE00655379 /* IntentHandler.swift in Sources */,
 				01490CB4278A020B00655379 /* IntentViewController.swift in Sources */,
@@ -509,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F8172C277AA46300EEA69F /* BeverageType.swift in Sources */,
+				017DAC5F279E312A00BA9904 /* DateView.swift in Sources */,
 				018C03082791E0B0006E46DA /* ProgressBar.swift in Sources */,
 				0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */,
 				01E1BDA6277DEAB10021B950 /* HealthStore.swift in Sources */,
@@ -523,10 +545,12 @@
 				01E1BDA8277DF2B50021B950 /* Date+Ext.swift in Sources */,
 				018116DD277A9F840090BF7F /* HBTabView.swift in Sources */,
 				01C698282784CE87005A2E15 /* ProfileViewModel.swift in Sources */,
+				017DAC6F279E37C600BA9904 /* Beverage+CoreDataProperties.swift in Sources */,
 				0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */,
 				01C7AE84279C854B0031D8A5 /* EmptyState.swift in Sources */,
 				0166DA152794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
+				017DAC6C279E37C600BA9904 /* Beverage+CoreDataClass.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,
 				01490CCA278A03EE00655379 /* IntentHandler.swift in Sources */,
 				018116CF277A9EB10090BF7F /* HiBoozeApp.swift in Sources */,
