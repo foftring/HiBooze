@@ -52,6 +52,21 @@ struct PersistenceController {
     func getBeverages() -> [Beverage]? {
         let request = NSFetchRequest<Beverage>(entityName: entityName)
         
+        let predicate = NSPredicate(format: "timeConsumed >= %@", Date().startOfDay as CVarArg)
+        
+        request.predicate = predicate
+        
+        do {
+            return try container.viewContext.fetch(request)
+        } catch {
+            print("Error fetching")
+            return nil
+        }
+    }
+    
+    func getHistoricalBeverages() -> [Beverage]? {
+        let request = NSFetchRequest<Beverage>(entityName: entityName)
+        
         do {
             return try container.viewContext.fetch(request)
         } catch {
@@ -67,7 +82,7 @@ struct PersistenceController {
         if context.hasChanges {
             do {
                 try context.save()
-                print("Saving to context")
+//                print("Saving to context")
             } catch {
                 print("Error saving to core data")
             }

@@ -90,7 +90,7 @@ class HealthStore {
         if let healthStore = healthStore {
             healthStore.save(sample) { success, error in
                 if success {
-                    print("Successfully save \(sample.quantityType)")
+//                    print("Successfully save \(sample.quantityType)")
                 } else {
                     if let error = error {
                         print("_____ERROR SAVING TO HEALTH")

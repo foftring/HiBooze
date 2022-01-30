@@ -44,6 +44,14 @@ struct TodayView: View {
                     } label: {
                         Text("Clear All Drinks")
                     }
+                    
+                    Button {
+                        withAnimation {
+                            viewModel.addHistoricalBeverages(numberOfDays: 1)
+                        }
+                    } label: {
+                        Text("Add Historical Beverage")
+                    }
                 }
                 
                 if !viewModel.drinksOfDay.isEmpty {

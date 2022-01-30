@@ -67,7 +67,7 @@ class TodayViewModel: ObservableObject {
                     print("Donation failed" + error.localizedDescription)
                 }
             } else {
-                print("Successfully donated")
+//                print("Successfully donated")
             }
         }
         
@@ -93,6 +93,28 @@ class TodayViewModel: ObservableObject {
         updateBeverages()
         healthStore.updateHealthStore(amount: Double(newBeverage.calories))
         makeDonation(title: beverage.title, calories: Int16(beverage.calories), ounces: beverage.ounces)
+    }
+    
+    func addHistoricalBeverages(numberOfDays: Int) {
+        
+        let newBeverage = Beverage(context: viewContext)
+        
+        newBeverage.title = "Historical Beverage Test"
+        newBeverage.calories = Int16.random(in: 75...200)
+        newBeverage.ounces = Double.random(in: 10...40)
+        
+        if let earlyDate = Calendar.current.date(
+          byAdding: .day,
+          value: -numberOfDays,
+          to: Date()) {
+            newBeverage.timeConsumed = earlyDate
+        } else {
+            newBeverage.timeConsumed = Date()
+        }
+        
+        
+        persistenceController.save()
+        healthStore.updateHealthStore(amount: Double(newBeverage.calories))
     }
     
     func removeAt(offsets: IndexSet) {

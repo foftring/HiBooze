@@ -13,7 +13,7 @@ struct HiBoozeApp: App {
     
     @Environment(\.scenePhase) private var scenePhase
     
-    var userSettings = UserSettings()
+    var userSettings = UserSettings.shared
     let persistenceController = PersistenceController.shared
     
     var body: some Scene {

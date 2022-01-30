@@ -10,12 +10,12 @@ import CoreData
 
 struct DateView: View {
     
-    
-    
     @SectionedFetchRequest(
             entity: Beverage.entity(),
             sectionIdentifier: \.dateString,
-            sortDescriptors: [])
+            sortDescriptors: [
+                NSSortDescriptor(keyPath: \Beverage.timeConsumed, ascending: false)
+            ])
         var beverages: SectionedFetchResults<String, Beverage>
     
     var body: some View {
@@ -23,11 +23,12 @@ struct DateView: View {
             ForEach(beverages) { section in
                 Section(header: Text(section.id)) {
                     ForEach(section) { beverage in
-                        Text(beverage.title ?? "No title!")
+                        DrinkAndCalorieStack(beverage: beverage)
                     }
                 }
             }
         }
+        .navigationTitle("History")
     }
 }
 

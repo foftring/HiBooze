@@ -21,7 +21,7 @@ struct CreateNewBeverageTypeView: View {
             TextField("Title", text: $beverageTitle)
             HStack {
                 TextField("Calories", text: $beverageCalories)
-                    .keyboardType(.decimalPad)
+                    .keyboardType(.numberPad)
             }
             HStack {
                 TextField("Ounces", text: $beverageOunces)
