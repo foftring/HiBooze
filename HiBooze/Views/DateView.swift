@@ -28,7 +28,6 @@ struct DateView: View {
                 }
             }
         }
-        .navigationTitle("History")
     }
 }
 

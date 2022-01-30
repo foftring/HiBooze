@@ -90,7 +90,6 @@ struct TodayView: View {
             viewModel.getBeverages()
             viewModel.healthStore.getAuthStatus()
         })
-        .navigationTitle("Today")
         .sheet(isPresented: $viewModel.isShowingAddView, onDismiss: {
             viewModel.drinkLimitHasBeenReached()
         }) {

@@ -9,7 +9,6 @@ import SwiftUI
 
 class ProfileViewModel: ObservableObject {
     
-    @Published var goalDrinks: Int = 31
     @Published var isShowingPhotoPicker: Bool = false
     @Published var profileImage : UIImage {
         didSet {
@@ -19,6 +18,8 @@ class ProfileViewModel: ObservableObject {
     
     
     let manager = LocalFileManager.instance
+    
+    
     
     func saveProfileImage() {
         manager.saveImage(image: profileImage, name: "profileImageCompressed")

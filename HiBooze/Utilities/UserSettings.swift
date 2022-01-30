@@ -14,6 +14,19 @@ class UserSettings: ObservableObject {
     enum USKeys: String {
         case drinkLimit = "drinkLimit"
         case beverageTypes = "beverageTypes"
+        case firstName = "firstName"
+        case lastName = "lastName"
+    }
+    
+    @Published var firstName: String {
+        didSet {
+            UserDefaults.standard.set(firstName, forKey: USKeys.firstName.rawValue)
+        }
+    }
+    @Published var lastName: String {
+        didSet {
+            UserDefaults.standard.set(lastName, forKey: USKeys.lastName.rawValue)
+        }
     }
     
     @Published var drinkLimit: Int {
@@ -31,6 +44,8 @@ class UserSettings: ObservableObject {
     
     init() {
         self.drinkLimit = UserDefaults.standard.object(forKey: USKeys.drinkLimit.rawValue) as? Int ?? 3
+        self.firstName = UserDefaults.standard.object(forKey: USKeys.firstName.rawValue) as? String ?? "First Name"
+        self.lastName = UserDefaults.standard.object(forKey: USKeys.lastName.rawValue) as? String ?? "Last Name"
         self.getBevTypes()
     }
     

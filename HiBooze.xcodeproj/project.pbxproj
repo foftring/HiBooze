@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0114CF5027837EA200285405 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF4F27837EA200285405 /* PhotoPicker.swift */; };
 		0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114CF5127838C4D00285405 /* LocalFileManager.swift */; };
+		011D6A2027A6F82300DC1B1A /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D6A1F27A6F82300DC1B1A /* CustomModifiers.swift */; };
+		011D6A2227A6F85100DC1B1A /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D6A2127A6F85100DC1B1A /* View+Ext.swift */; };
 		01413F9927A2DC7700EC3164 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA7277DF2B50021B950 /* Date+Ext.swift */; };
 		01413F9A27A2DC7800EC3164 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BDA7277DF2B50021B950 /* Date+Ext.swift */; };
 		01490C9D2788952400655379 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490C9C2788952400655379 /* Persistance.swift */; };
@@ -124,6 +126,8 @@
 /* Begin PBXFileReference section */
 		0114CF4F27837EA200285405 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		0114CF5127838C4D00285405 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		011D6A1F27A6F82300DC1B1A /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		011D6A2127A6F85100DC1B1A /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		01490C72278886B200655379 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		01490C7D278886B200655379 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		01490C9C2788952400655379 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 			children = (
 				01E1BDA7277DF2B50021B950 /* Date+Ext.swift */,
 				018C03032791DBE5006E46DA /* URL+Ext.swift */,
+				011D6A2127A6F85100DC1B1A /* View+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				01E1BDA5277DEAB10021B950 /* HealthStore.swift */,
 				0114CF5127838C4D00285405 /* LocalFileManager.swift */,
 				017DAC5A279E22F900BA9904 /* Alert.swift */,
+				011D6A1F27A6F82300DC1B1A /* CustomModifiers.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 			files = (
 				01F8172C277AA46300EEA69F /* BeverageType.swift in Sources */,
 				017DAC5F279E312A00BA9904 /* DateView.swift in Sources */,
+				011D6A2227A6F85100DC1B1A /* View+Ext.swift in Sources */,
 				018C03082791E0B0006E46DA /* ProgressBar.swift in Sources */,
 				0114CF5227838C4D00285405 /* LocalFileManager.swift in Sources */,
 				01E1BDA6277DEAB10021B950 /* HealthStore.swift in Sources */,
@@ -554,6 +561,7 @@
 				01C7AE84279C854B0031D8A5 /* EmptyState.swift in Sources */,
 				0166DA152794A34C00EACE3A /* CreateNewBeverageTypeView.swift in Sources */,
 				01F8172E277AA50700EEA69F /* AddBeverageView.swift in Sources */,
+				011D6A2027A6F82300DC1B1A /* CustomModifiers.swift in Sources */,
 				017DAC6C279E37C600BA9904 /* Beverage+CoreDataClass.swift in Sources */,
 				018116DF277A9F9C0090BF7F /* TodayView.swift in Sources */,
 				01490CCA278A03EE00655379 /* IntentHandler.swift in Sources */,

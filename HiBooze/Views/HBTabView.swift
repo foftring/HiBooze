@@ -7,22 +7,36 @@
 
 import SwiftUI
 
+enum Tabs: String {
+    case today, profile, history
+}
+
 struct HBTabView: View {
+    
+    @State var selectedTab: Tabs = .today
+    
     var body: some View {
-        TabView {
-            TodayView()
-                .tabItem {
-                    Label("Today", systemImage: "calendar.circle.fill")
-                }
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.fill")
-                }
-            
-            DateView()
-                .tabItem {
-                    Label("History", systemImage: "clock.fill")
-                }
+        NavigationView {
+            TabView(selection: $selectedTab) {
+                TodayView()
+                    .tabItem {
+                        Label("Today", systemImage: "calendar.circle.fill")
+                    }
+                    .tag(Tabs.today)
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+                    .tag(Tabs.profile)
+                
+                DateView()
+                    .tabItem {
+                        Label("History", systemImage: "clock.fill")
+                    }
+                    .tag(Tabs.history)
+            }
+            .navigationTitle(selectedTab.rawValue.capitalized)
+            .navigationViewStyle(.automatic)
         }
     }
 }

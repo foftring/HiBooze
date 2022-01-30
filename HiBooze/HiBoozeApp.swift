@@ -18,11 +18,9 @@ struct HiBoozeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                HBTabView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                    .environmentObject(userSettings)
-            }
+            HBTabView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(userSettings)
         }
         .onChange(of: scenePhase) { phase in
             persistenceController.save()

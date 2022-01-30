@@ -10,7 +10,6 @@ import SwiftUI
 struct ProfileView: View {
     
     @StateObject var viewModel = ProfileViewModel()
-    
     @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
@@ -20,7 +19,7 @@ struct ProfileView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundColor(Color(.secondarySystemBackground))
                 
-                HStack(spacing: 50) {
+                HStack(spacing: 25) {
                     Image(uiImage: viewModel.profileImage)
                         .resizable()
                         .clipShape(Circle())
@@ -28,10 +27,15 @@ struct ProfileView: View {
                         .onTapGesture {
                             viewModel.isShowingPhotoPicker = true
                         }
+                        .padding(.leading)
                     
-                    
-                    Text("Frank Oftring")
-                        .font(.system(size: 50))
+                    VStack {
+                        TextField("First Name", text: $userSettings.firstName)
+                            .profileNameStyle()
+                        TextField("Last Name", text: $userSettings.lastName)
+                            .profileNameStyle()
+                    }
+                    .padding(.trailing, 16)
                 }
                 
             }
@@ -50,7 +54,6 @@ struct ProfileView: View {
             
             Spacer()
         }
-        .navigationTitle("Profile")
         .sheet(isPresented: $viewModel.isShowingPhotoPicker, content: {
             PhotoPicker(profileImage: $viewModel.profileImage)
         })
