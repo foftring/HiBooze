@@ -11,7 +11,4 @@ Built to practice SwiftUI and gain experience working with HealthKit
 - Saving images to FileManager
 - More practice with MVVM
 - Combining UiKit (UIImagePickerController) with SwiftUI views through UIViewControllerRepresentable
-
-
-# ToDo
-- Work with dates and calendar components 
+- CoreData SectionedFetchRequest to group entities by date
