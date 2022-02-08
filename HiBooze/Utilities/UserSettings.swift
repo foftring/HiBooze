@@ -44,8 +44,8 @@ class UserSettings: ObservableObject {
     
     init() {
         self.drinkLimit = UserDefaults.standard.object(forKey: USKeys.drinkLimit.rawValue) as? Int ?? 3
-        self.firstName = UserDefaults.standard.object(forKey: USKeys.firstName.rawValue) as? String ?? "First Name"
-        self.lastName = UserDefaults.standard.object(forKey: USKeys.lastName.rawValue) as? String ?? "Last Name"
+        self.firstName = UserDefaults.standard.object(forKey: USKeys.firstName.rawValue) as? String ?? ""
+        self.lastName = UserDefaults.standard.object(forKey: USKeys.lastName.rawValue) as? String ?? ""
         self.getBevTypes()
     }
     
@@ -84,7 +84,10 @@ class UserSettings: ObservableObject {
         let intCalories = Int(calories) ?? 0
         let doubleOunces = Double(ounces) ?? 0.0
         
-        let newBeverage = BeverageType(title: title, calories: intCalories, ounces: doubleOunces)
+        let roundedOunces = round(doubleOunces * 100) / 100.0
+
+        
+        let newBeverage = BeverageType(title: title, calories: intCalories, ounces: roundedOunces)
         
         beverageTypes.append(newBeverage)
         self.saveBevTypes()

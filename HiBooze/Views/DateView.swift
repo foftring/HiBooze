@@ -12,7 +12,7 @@ struct DateView: View {
     
     @SectionedFetchRequest(
             entity: Beverage.entity(),
-            sectionIdentifier: \.dateString,
+            sectionIdentifier: \.dateStringRelative,
             sortDescriptors: [
                 NSSortDescriptor(keyPath: \Beverage.timeConsumed, ascending: false)
             ])
@@ -23,7 +23,9 @@ struct DateView: View {
             ForEach(beverages) { section in
                 Section(header: Text(section.id)) {
                     ForEach(section) { beverage in
-                        DrinkAndCalorieStack(beverage: beverage)
+                        VStack {
+                            DrinkAndCalorieStack(beverage: beverage)
+                        }
                     }
                 }
             }

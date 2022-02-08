@@ -23,7 +23,6 @@ class LocalFileManager: ObservableObject {
         
         do {
             try data.write(to: path)
-            print("Success saving")
         } catch let error {
             print("Error saving \(error)")
         }
@@ -36,8 +35,6 @@ class LocalFileManager: ObservableObject {
                   print("Error getting path")
                   return nil
               }
-        print("Printing path")
-        print(path)
         return UIImage(contentsOfFile: path)
         
     }

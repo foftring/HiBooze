@@ -56,8 +56,7 @@ struct AddBeverageView: View {
                 Button {
                     self.presentationMode.wrappedValue.dismiss()
                 } label: {
-                    Text("Cancel")
-                        .foregroundColor(.red)
+                    XDismissButton()
                 }
             }
         }

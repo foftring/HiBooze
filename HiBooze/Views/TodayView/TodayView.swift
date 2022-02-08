@@ -22,7 +22,6 @@ struct TodayView: View {
                 Section("Alcohol Intake") {
                     HStack(spacing: 30) {
                         
-                        
                         ProgressBar(progress: progressValue)
                             .frame(width: 100, height: 100)
                             .padding()
@@ -44,18 +43,10 @@ struct TodayView: View {
                     } label: {
                         Text("Clear All Drinks")
                     }
-                    
-                    Button {
-                        withAnimation {
-                            viewModel.addHistoricalBeverages(numberOfDays: 1)
-                        }
-                    } label: {
-                        Text("Add Historical Beverage")
-                    }
                 }
                 
                 if !viewModel.drinksOfDay.isEmpty {
-                    Section("Drinks of the Day") {
+                    Section("Drink Log") {
                         ForEach(viewModel.drinksOfDay, id: \.self) { beverage in
                             DrinkAndCalorieStack(beverage: beverage)
                         }

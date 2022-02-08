@@ -16,10 +16,7 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
-    
     let manager = LocalFileManager.instance
-    
-    
     
     func saveProfileImage() {
         manager.saveImage(image: profileImage, name: "profileImageCompressed")

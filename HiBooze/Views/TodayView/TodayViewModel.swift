@@ -101,7 +101,7 @@ class TodayViewModel: ObservableObject {
         
         newBeverage.title = "Historical Beverage Test"
         newBeverage.calories = Int16.random(in: 75...200)
-        newBeverage.ounces = Double.random(in: 10...40)
+        newBeverage.ounces = round(Double.random(in: 10...40) * 100 / 100.0)
         
         if let earlyDate = Calendar.current.date(
           byAdding: .day,
